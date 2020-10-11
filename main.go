@@ -38,10 +38,9 @@ func main() {
 		_, err = fmt.Scanln(&shouldConvertAgain)
 		if err != nil {
 			printError(errReadingInput)
-		} else {
-
 		}
-		if strings.ToUpper(strings.Trim(shouldConvertAgain)) != "Y"		
+
+		if strings.ToUpper(strings.TrimSpace(shouldConvertAgain)) != "Y" {
 			fmt.Println("Good bye!")
 			break
 		}
